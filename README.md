@@ -22,14 +22,16 @@ Three way <br>
 3.Programatic way(PHP)<br>
 browse http://localhost:8000/hello/shamim <br>
 <b>JSON Response</b> <br>
-&lt;pre&gt;
-$data = array( 
-            'name' => $name,
-        );
-//JSON
- return new Response(
-    json_encode($data),
-    200,
-    array('Content-Type' => 'application/json')
-);
-&lt;/pre&gt;
+
+$data = array(  <br>
+            'name' => $name, <br>
+        );<br>
+//JSON<br>
+ return new Response(<br>
+    json_encode($data),<br>
+    200,<br>
+    array('Content-Type' => 'application/json')<br>
+ or<br>
+ return new JsonResponse($data); <br>  
+);<br>
+
